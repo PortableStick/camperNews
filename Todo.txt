@@ -1,0 +1,4 @@
+Todo.txt
+
+1. A search filter
+2. Use D3 to color/size the tiles depending on the number of upvotes
