@@ -1,5 +1,44 @@
-<div class="container-fluid">
-	<div class="story" ng-repeat="story in stories">
-		<h1>{{story.headline}}</h1>
+<div class="container-fluid" ng-init="orderFilter = 'timePosted'">
+	<h1 class="siteTitle">Camper News</h1>
+	<div class="orderControls">
+		<div class="btn" ng-class="orderFilter === 'timePosted' ? 'active' : 'inactive' " ng-click="orderFilter = 'timePosted'">newest</div>
+		<div class="btn" ng-class="orderFilter === '-votes' ? 'active' : 'inactive' " ng-click="orderFilter = '-votes'">most popular</div>
+	</div>
+	<div class="story" ng-repeat="story in stories | orderBy: orderFilter">
+		
+		<a ng-href="{{story.url}}" target="_blank">
+			<div class="img-container">
+				<img ng-src="{{story.image ? story.image : story.author.logo}}">
+			</div>
+			<h2 class="headline">{{story.headline}}</h2>
+		</a>
+		<p class="date">{{story.timePosted | date}}</p>
+		<h4 class="description">{{story.description}}</h4>
+		<div class="author">
+			<span>submitted by:</span> <a ng-href="http://www.freecodecamp.com/{{story.author.userName}}" target="_blank"><h3>{{story.author.userName}}</h3></a>
+		</div>
+		
+		<p class="rating"><i class="fa fa-fire"></i>{{story.votes}}</p>
+
 	</div>
 </div>
+
+
+<!--
+
+
+
+headline: x.headline,
+timePosted: x.timePosted,
+url: x.link,
+description: x.metaDescription,
+votes: x.upVotes.length,
+image: x.image || null,
+author: {
+	userName: x.author.username,
+	logo: x.author.picture
+
+
+
+
+-->

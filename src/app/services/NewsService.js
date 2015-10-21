@@ -28,19 +28,3 @@
 })();
 
 
-/*
-
-var newsObj = {
-								headline: x.headline,
-								timePosted: x.timePosted,
-								url: x.link,
-								description: x.metaDescription,
-								votes: x.upVotes.length,
-								image: x.image || null,
-								author: {
-									userName: x.author.username,
-									logo: x.author.picture
-								}
-				};
-
-*/
