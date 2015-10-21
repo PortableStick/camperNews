@@ -1,7 +1,7 @@
-<div class="container-fluid" ng-init="orderFilter = 'timePosted'">
+<div class="container-fluid" ng-init="orderFilter = '-timePosted'">
 	<h1 class="siteTitle">Camper News</h1>
 	<div class="orderControls">
-		<div class="btn" ng-class="orderFilter === 'timePosted' ? 'active' : 'inactive' " ng-click="orderFilter = 'timePosted'">newest</div>
+		<div class="btn" ng-class="orderFilter === '-timePosted' ? 'active' : 'inactive' " ng-click="orderFilter = '-timePosted'">newest</div>
 		<div class="btn" ng-class="orderFilter === '-votes' ? 'active' : 'inactive' " ng-click="orderFilter = '-votes'">most popular</div>
 	</div>
 	<div class="story" ng-repeat="story in stories | orderBy: orderFilter">
@@ -18,7 +18,7 @@
 			<span>submitted by:</span> <a ng-href="http://www.freecodecamp.com/{{story.author.userName}}" target="_blank"><h3>{{story.author.userName}}</h3></a>
 		</div>
 		
-		<p class="rating"><i class="fa fa-fire"></i>{{story.votes}}</p>
+		<p class="rating"><i class="fa fa-fire"></i><span class="votes">{{story.votes}}</span></p>
 
 	</div>
 </div>

@@ -1,0 +1,32 @@
+/* Fonts
+================================ */
+@import url(https://fonts.googleapis.com/css?family=Vollkorn:700,400|Raleway:400);
+$vollkorn					:	'Vollkorn', sans;
+$raleway					:	'Raleway', sans;
+
+
+/* Color delcarations
+================================ */
+$white						:	#fff;
+
+
+$darkRed					:	#250700;
+$darkGreen					:	#002518;
+$fontBlack					:	rgba(25,25,25,0.7);
+$fontRed					: 	opacify($darkRed, 0.7);
+
+/* Color assignment
+================================ */
+
+//fonts
+
+$fontColor					:	$fontBlack;
+$linkColor					:	$fontRed;
+$linkHoverColor				:	lighten($linkColor, 10%);
+$fire						:	lighten($darkRed, 15%);
+$rating						:	$white;
+
+//backgrounds
+
+$storyBG					:	$white;
+$ratingBG					:	lighten($darkGreen, 10%);
