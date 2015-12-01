@@ -4,16 +4,29 @@
 $vollkorn					:	'Vollkorn', sans;
 $raleway					:	'Raleway', sans;
 
+/* Font assignment          
+================================ */
+
+$ratingFont                 :   $vollkorn;
+$dateFont                   :   $vollkorn;
+$headlineFont               :   $vollkorn;
+$descriptionFont            :   $raleway;
+$orderBtnFont               :   $vollkorn;
+
+
 
 /* Color delcarations
 ================================ */
 $white						:	#fff;
 
 
-$darkRed					:	#250700;
-$darkGreen					:	#002518;
-$fontBlack					:	rgba(25,25,25,0.7);
+$darkRed					:	#440700;
+$darkGreen					:	#007636;
+$fontBlack					:	#333;
 $fontRed					: 	opacify($darkRed, 0.7);
+$transparentBlack           :   rgba(0,0,0,0.6);
+
+$mainGrad                   :   linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%); 
 
 /* Color assignment
 ================================ */
@@ -21,12 +34,19 @@ $fontRed					: 	opacify($darkRed, 0.7);
 //fonts
 
 $fontColor					:	$fontBlack;
-$linkColor					:	$fontRed;
+$linkColor					:	$fontBlack;
 $linkHoverColor				:	lighten($linkColor, 10%);
 $fire						:	lighten($darkRed, 15%);
 $rating						:	$white;
+$activeBtnFont              :   $white;
 
 //backgrounds
 
 $storyBG					:	$white;
 $ratingBG					:	lighten($darkGreen, 10%);
+$activeBtnBG                :   $fontRed;
+$storyHoverBG               :   $mainGrad;
+
+$orderBtnBorder             :   $transparentBlack;
+
+$boxShadow                  :   $transparentBlack;

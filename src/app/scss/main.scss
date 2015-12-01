@@ -17,42 +17,62 @@ a{
 
 .orderControls{
 	div{
-		font-family: $vollkorn;
+		font-family: $orderBtnFont;
 		font-weight: 700;
 		font-variant: small-caps;
+		border: 1px dotted $orderBtnBorder;
+	}
+	.active {
+		background-color: $activeBtnBG;
+		color: $activeBtnFont;
 	}
 }
 
 .story{
 	clear: left;
-	padding: 10px 0;
+	padding: 10px 20px;
+	margin-left: 50px;
+	margin-right: 50px;
 	overflow: hidden;
 	padding-bottom: 20px;
 	border-bottom: 1px dashed grey;
 	background-color: $storyBG;
+	opacity: 0.6;
+	transition: opacity 0.5s;
+
+	&:hover {
+		opacity: 1;
+		font-size: 1.2em;
+
+	}
 
 	.headline{
-		font-family: $vollkorn;
+		font-family: $headlineFont;
 		font-weight: 400;
 	}
 
 	.description{
-		font: $raleway;
+		font: $descriptionFont;
 		font-weight: 400;
 	}
 
 	.img-container{
 		float: left;
-		min-height: 100px;
-		padding: 10px;
+		height: 200px;
+		width: 200px;
+		padding: 0;
+		overflow: hidden;
+		box-shadow: 0 25px 10px -14px $boxShadow;
+		margin-right: 20px;
+		border-radius: 23px;
+		text-align: center;
 	}
 
 	img{
-		width: 200px;
-		margin-right: 20px;
-		border-radius: 23px;
-		margin-top: auto;
-		box-shadow: 0 25px 10px -14px black;
+		width: auto;
+		padding: 0;
+		margin: 0;
+		height: 200px;
 	}
 
 	.author, .rating{
@@ -74,23 +94,25 @@ a{
 	}
 
 	.date{
-		font-family: $vollkorn;
+		font-family: $dateFont;
 	}
 
 	.rating{
-		font-size: 1.4em;
+		font-size: 1.6em;
 		color: $rating;
-		font-family: $vollkorn;
+		font-family: $ratingFont;
 		font-weight: 400;
+		background-color: $ratingBG;
+		padding: 5px 10px;
+		border-radius: 5px;
+		cursor: default;
 		i.fa{
 			color: $fire;
 			margin-right: 6px;
 		}
 
 		.votes{
-			background-color: $ratingBG;
 			padding: 5px;
-			border-radius: 50%;
 		}
 	}
 
